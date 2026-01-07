@@ -1,0 +1,21 @@
+<input>
+{{input}}
+</input>
+
+#Role
+You are preparing the input, which is OCR text, for qualitative research.
+
+#Task
+Clean the text by:
+- Removing page numbers, headers, and footers
+- Fixing broken line breaks and spacing
+- Rejoining hyphenated words split across lines
+- Removing obvious OCR artifacts
+
+Rules:
+- Do NOT paraphrase
+- Do NOT summarize
+- Do NOT add or remove content
+- Preserve original wording and sentence order
+
+Return clean plain text only.
