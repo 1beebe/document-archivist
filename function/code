@@ -1,0 +1,59 @@
+console.log('Starting array to CSV conversion...');
+
+// Input validation
+if (!ai.config.inputArray) {
+  throw new Error('Input array is required');
+}
+
+if (!Array.isArray(ai.config.inputArray)) {
+  throw new Error('Input must be an array');
+}
+
+if (ai.config.inputArray.length === 0) {
+  throw new Error('Input array cannot be empty');
+}
+
+const firstObject = ai.config.inputArray[0];
+
+if (typeof firstObject !== 'object' || firstObject === null || Array.isArray(firstObject)) {
+  throw new Error('First element of array must be an object');
+}
+
+console.log(`Processing ${ai.config.inputArray.length} objects...`);
+
+// Extract column headers from first object (for ordering only)
+const headers = Object.keys(firstObject);
+console.log(`Detected ${headers.length} columns: ${headers.join(', ')}`);
+
+// Helper function to escape CSV values
+const escapeCSVValue = (value) => {
+  if (value == null) {
+    return '';
+  }
+
+  const stringValue = String(value);
+
+  if (/[",\n\r]/.test(stringValue)) {
+    const escaped = stringValue.replace(/"/g, '""');
+    return `"${escaped}"`;
+  }
+
+  return stringValue;
+};
+
+// Generate data rows ONLY
+const dataRows = ai.config.inputArray.map(obj => {
+  const rowValues = headers.map(header => {
+    const value = obj[header];
+    return escapeCSVValue(value);
+  });
+  return rowValues.join(',');
+});
+
+// Combine rows (no header)
+const csvString = dataRows.join('\n');
+
+// Set output variable
+ai.vars[ai.config.outputVariableName] = csvString;
+
+console.log(`CSV conversion complete. Generated ${dataRows.length} data rows.`);
