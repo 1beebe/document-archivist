@@ -28,7 +28,7 @@ This agent automates the entire workflow, transforming unstructured documents in
 - **Claude 4.5 Sonnet** for underlying model, text cleaning and metadata extraction
 - **Google Docs API** for document storage
 - **Google Sheets API** for metadata indexing
-- **JavaScript** custom function for data transformation
+- **JavaScript** custom function for data transformation (vibe-coded in MindStudio)
 
 ## Sample Output
 
