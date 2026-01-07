@@ -1,0 +1,37 @@
+<cleanText>
+{{cleanText}}
+</cleanText>
+
+<subject>
+{{subject}}
+</subject>
+
+<cleanURL>
+{{cleanURL}}
+</cleanURL>
+
+<rawURL>
+{{rawURL}}
+</rawURL>
+
+Based only on the cleanText provided, suggest likely document metadata.
+If information is not explicit, return "Unknown".
+Do NOT guess.
+Echo the subject provided by the user exactly as "document_id"
+
+IMPORTANT: Use these exact values for the URLs:
+- cleanURL: "{{cleanURL}}"
+- rawURL: "{{rawURL}}"
+
+[
+  {
+    "document_id": "003",
+    "document_type": "Internal memo",
+    "author_or_speaker": "Office of Trade Policy Analysis",
+    "date_or_date_range": "June 1992",
+    "institution_or_source": "U.S. Department of Commerce",
+    "notes": "Discusses emerging concerns about NAFTA negotiations and domestic manufacturing impacts.",
+    "cleanURL": "https://docs.google.com/document/d/1CleanExampleURL",
+    "rawURL": "https://docs.google.com/document/d/1RawExampleURL"
+  }
+]
