@@ -3,6 +3,12 @@
 
 A MindStudio AI agent that automatically processes PDF documents from email attachments, cleans up OCR text, and organizes documents with structured metadata.
 
+## Promo
+<p align="left">
+  <img src="assets/archivist%20promo.gif" width="450" alt="Archivist promo demo" />
+</p>
+
+
 ## Rationale
 
 Managing document archives often involves tedious manual work:
