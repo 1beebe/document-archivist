@@ -1,9 +1,9 @@
 
-# Document Processing & Archival Agent
+# Document Processing & Archival Agent (Archive Intelligence)
 
 A MindStudio AI agent that automatically processes PDF documents from email attachments, cleans up OCR text, and organizes documents with structured metadata.
 
-## Promo
+## Summary
 <p align="left">
   <img src="assets/archivist%20promo.gif" width="450" alt="Archivist promo demo" />
 </p>
@@ -31,7 +31,8 @@ This agent automates the entire workflow, transforming unstructured documents in
 
 ### Technology Stack
 - **MindStudio** for workflow orchestration
-- **Claude 4.5 Sonnet** for underlying model, text cleaning and metadata extraction
+- **Gemini 2.0 Flash Lite** for underlying model and text cleaning
+- **Claude 3 Haiku** for metadata extraction
 - **Google Docs API** for document storage
 - **Google Sheets API** for metadata indexing
 - **JavaScript** custom function for data transformation (vibe-coded in MindStudio)
@@ -78,7 +79,7 @@ When an email with subject "006" and a PDF attachment is processed:
 
 ## Setup & Usage
 
-1. Deploy the MindStudio agent to your workspace [Remix Link](https://app.mindstudio.ai/agents/remix-ocr--metadata-pal-f5903d0b/remix)
+1. Deploy the MindStudio agent to your workspace [Remix Link](https://app.mindstudio.ai/agents/archive-intelligence-a1fcd0dc/remix)
 2. Configure Live Trigger Email and Google Workspace integration with appropriate permissions
 3. Add approved email sender addresses
 4. Send emails with PDF attachments using the document ID as the subject line
